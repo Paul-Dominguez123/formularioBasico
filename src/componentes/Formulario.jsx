@@ -8,131 +8,172 @@ export const Formulario=()=>{
             Registro de producto
           </Titulo>
       <Form>
+        <InputWrapper>  
         <Input
           type="text"
           placeholder="Código Interno"
           name="codigoInterno"
           
         />
+        </InputWrapper>
+        <InputWrapper>  
         <Input
           type="text"
           placeholder="Nombre"
           name="nombre"
          
         />
+        </InputWrapper>
+        <InputWrapper>  
         <Input
           type="text"
           placeholder="Nombre Alternativo"
           name="nombreAlternativo"
           
         />
+        </InputWrapper>
+        <InputWrapper>
         <Input
           type="text"
           placeholder="Descripcion"
           name="descripcion"
           
         />
+        </InputWrapper>
+        <InputWrapper>
         <Input
           type="text"
           placeholder="Modelo"
           name="modelo"
           
         />
+        </InputWrapper>
+        <InputWrapper>
         <Input
           type="text"
           placeholder="Unidade de medida"
           name="unidadMedida"
           
         />
+        </InputWrapper>
+        <InputWrapper>
         <Input
           type="text"
           placeholder="¿Posee IGV?"
           name="poseeIgv"
           
         />
+        </InputWrapper>
+        <InputWrapper>
         <Input
           type="number"
           placeholder="Categoria Id"
           name="categoriaId"
           
-        /><Input
+        />
+        </InputWrapper>
+        <InputWrapper>
+        <Input
         type="text"
         placeholder="Marca"
         name="marca"
         
       />
+      </InputWrapper>
+      <InputWrapper>
       <Input
           type="text"
           placeholder="Precio"
           name="precio"
           
         />
+        </InputWrapper>
+        <InputWrapper>
         <Input
           type="date"
           placeholder="Fecha de Vencimiento"
           name="fechaVencimiento"
           
         />
+        </InputWrapper>
+        <InputWrapper>
         <Input
           type="number"
           placeholder="Unidades"
           name="unidad"
           
         />
+        </InputWrapper>
+        <InputWrapper>
         <Input
           type="text"
           placeholder="Descripcion de venta"
           name="descripcionVenta"
           
         />
+        </InputWrapper>
+        <InputWrapper>
         <Input
           type="text"
           placeholder="Factor"
           name="factor"
           
         />
+        </InputWrapper>
+        <InputWrapper>
         <Input
           type="text"
           placeholder="Precio 1"
           name="precio1"
           
         />
+        </InputWrapper>
+        <InputWrapper>
         <Input
           type="text"
           placeholder="Precio 2"
           name="precio2"
           
         />
+        </InputWrapper>
+        <InputWrapper>
         <Input
           type="text"
           placeholder="Precio 3"
           name="precio3"
           
         />
+        </InputWrapper>
+        <InputWrapper>
         <Input
           type="text"
           placeholder="Stock"
           name="stock"
           
         />
+        </InputWrapper>
+        <InputWrapper>
         <Input
           type="file"
           placeholder="Imagen"
           name="imagen"
           
         />
+        </InputWrapper>
+        <InputWrapper>
         <Input
           type="number" min="1" max="100"
           placeholder="En Descuento"
           name="enDescuento"
           
-        />
+        /></InputWrapper>
+        <InputWrapper>
         <Input
           type="number"
           placeholder="Decuento"
           name="descuento"
           
-        />
+        /></InputWrapper>
 
 
 
@@ -152,7 +193,7 @@ const slideIn=keyframes`
 
 const FormContainer = styled.div`
 margin-top:30px;
-  padding-top:600px;
+  padding-top:60px;
   animation: ${slideIn} 1.5s ease-in-out;
 
  
@@ -163,18 +204,37 @@ const Titulo=styled.h1`
  text-align:center;
  padding-bottom:20px;
  text-decoration:aliceblue;
+ @media (max-width: 768px) {
+    padding-top: 850px;
+  }
   
 `;
 
 const Form = styled.form`
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  
+  
+`;
+const InputWrapper = styled.div`
+  width: calc(30% - 20px);
+  margin: 10px;
+  @media (max-width: 768px) {
+    width: calc(50% - 20px);
+  }
+
+  @media (max-width: 480px) {
+    width: calc(100% - 20px);
+  }
 `;
 
 const Input = styled.input`
   margin-bottom: 10px;
+  width:100%;
   padding: 10px;
   font-size: 16px;
+  border-radius: 10px;
+  border: 0px;
 `;
 
 const Button = styled.button`

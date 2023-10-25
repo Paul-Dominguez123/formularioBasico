@@ -67,8 +67,8 @@ const PrincipalConteiner = styled.div`
 const Button1 = styled.button`
   height: 57px;
   width: 300px;
-  background-color: #c5b8b8;
-  border-radius: 10px;
+  background-color: #a4cba1;
+  
   border: 0px;
   margin-bottom: 10px; 
   cursor:pointer;
@@ -81,9 +81,8 @@ const Button1 = styled.button`
 `;
 
 const Modal = styled.div`
-  background-color: #5a788b;
-  max-width: 500px;
-  height: auto;
+  background-color:rgb(118, 211, 28);
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,11 +93,22 @@ const Modal = styled.div`
   animation:${slideIn} 1.5s ease-in-out;
   @media(max-width:700px){
     width:100vw;
+    background-color:rgb(118, 211, 28);
+  
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 10px;
+  border: 0px;
+  
   }
 `;
 const Modal2 = styled.div`
-  background-color: #5a788b;
-  max-width:400px;
+  background-color:rgb(118, 211, 28);
+  width:40vw;
   height: 50vh;
   display: flex;
   flex-direction: column;
