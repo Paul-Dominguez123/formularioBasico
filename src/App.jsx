@@ -7,11 +7,17 @@ export function App() {
   const[showModal,setShowModal]=useState(false);
   const[showModal2,setShowModal2]=useState(false);
 
-  function openModal2(){
+  /* function openModal2(){
     setShowModal2(true);
     setTimeout(()=>{
       setShowModal2(false)
     },3000)
+  } */
+  function openModal2(){
+    setShowModal2(true);
+  }
+  const closeModal2=()=>{
+    setShowModal2(false);
   }
 
   const closeModal=()=>{
@@ -32,6 +38,9 @@ export function App() {
           <OtroDiv>
           <Button1 onClick={openModal2}>Guardar</Button1>
           {showModal2 && <Modal2>
+            <CloseButton onClick={closeModal2} >
+              
+            </CloseButton>
               guardanding
             </Modal2>}
           <Button1 onClick={displayModal}>
@@ -82,7 +91,8 @@ const Button1 = styled.button`
 
 const Modal = styled.div`
   background-color:rgb(118, 211, 28);
-  
+  width: 90vw;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,6 +135,16 @@ const Modal2 = styled.div`
     height:30vh;
   }
 
+`;
+
+const CloseButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 `;
 
 const OtroDiv=styled.div`

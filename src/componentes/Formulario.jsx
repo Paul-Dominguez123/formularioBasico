@@ -192,20 +192,23 @@ const slideIn=keyframes`
 `;
 
 const FormContainer = styled.div`
-margin-top:30px;
-  padding-top:60px;
+margin-top:30x;
+  padding-top:20px;
   animation: ${slideIn} 1.5s ease-in-out;
-
+  justify-content:center;
+  align-items:center;
+  align-self:center;
  
 `;
 const Titulo=styled.h1`
  align-items:center;
  justify-content:center;
  text-align:center;
+ 
  padding-bottom:20px;
  text-decoration:aliceblue;
  @media (max-width: 768px) {
-    padding-top: 850px;
+    padding-top: 900px;
   }
   
 `;
@@ -214,7 +217,10 @@ const Form = styled.form`
   display: flex;
   flex-wrap: wrap;
   
-  
+  transform: translate(53px, 10px);
+  @media(max-width:700px){
+    transform:translate(0px,10px)
+  }
 `;
 const InputWrapper = styled.div`
   width: calc(30% - 20px);
@@ -235,6 +241,7 @@ const Input = styled.input`
   font-size: 16px;
   border-radius: 10px;
   border: 0px;
+  
 `;
 
 const Button = styled.button`
